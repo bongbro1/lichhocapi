@@ -4,6 +4,7 @@
 
     const sessionPayload = {
         username: appConfig.username,
+        password: appConfig.password,
         domain: appConfig.domain
     };
 
@@ -129,7 +130,7 @@
 
     window.getGrades = () => {
         if (!state.selectedStudentId) return alert("Vui lòng chọn người dùng");
-        handleAction("/student_marks", "POST");
+        handleAction("/student_marks", "POST", { studentId: state.selectedStudentId });
     };
 
     userSearchInput.addEventListener("input", (e) => {

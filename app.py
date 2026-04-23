@@ -253,10 +253,13 @@ def api_send_push_notification():
 
 @app.route("/schedule", methods=["POST"])
 def get_schedule_endpoint():
-    req_data = request.get_json()
-    username = req_data.get("username")
-    password = req_data.get("password")
-    domain = req_data.get("domain")
+    user = get_session_user()
+    req_data = request.get_json(silent=True) or {}
+    
+    # Ưu tiên lấy studentId từ client, nếu không có thì lấy username của chính Admin
+    username = req_data.get("studentId") or req_data.get("username") or (user.get("username") if user else None)
+    password = req_data.get("password") or (user.get("password") if user else None)
+    domain = req_data.get("domain") or (user.get("domain") if user else None)
 
     if not username or not password or not domain:
         return jsonify(
@@ -281,10 +284,13 @@ def get_schedule_endpoint():
 
 @app.route("/student_marks", methods=["POST"])
 def get_student_marks_endpoint():
-    req_data = request.get_json()
-    username = req_data.get("username")
-    password = req_data.get("password")
-    domain = req_data.get("domain")
+    user = get_session_user()
+    req_data = request.get_json(silent=True) or {}
+    
+    # Ưu tiên lấy studentId từ client, nếu không có thì lấy username của chính Admin
+    username = req_data.get("studentId") or req_data.get("username") or (user.get("username") if user else None)
+    password = req_data.get("password") or (user.get("password") if user else None)
+    domain = req_data.get("domain") or (user.get("domain") if user else None)
 
     if not username or not password or not domain:
         return jsonify(

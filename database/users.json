@@ -13,7 +13,7 @@
     },
     "k255510301208": {
         "password": "huyen1809@",
-        "domain": "ICTU"
+        "domain": "TNUT"
     },
     "DTC21H4802010193": {
         "password": "wrong-password",
@@ -40,7 +40,15 @@
         "domain": "TNUT"
     },
     "K235510301158": {
-        "password": "Duonglan05@",
+        "password": "04/01/2005",
+        "domain": "ICTU"
+    },
+    "K255510301208": {
+        "password": "huyen1809@",
         "domain": "TNUT"
+    },
+    "DTC235200588": {
+        "password": "04/01/2005",
+        "domain": "ICTU"
     }
 }

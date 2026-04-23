@@ -6,25 +6,7 @@
   "school_name": "Trường đại học Công nghệ thông tin và Truyền thông Thái Nguyên",
   "lessons": [
     {
-      "id": "0e40ebb9-634f-4c8b-a905-2af3b46081c0",
-      "title": "Quản trị hệ thống",
-      "code": "SYM431",
-      "credit": 3,
-      "teacher": null,
-      "location": "C4.PM303",
-      "date": "2026-04-22",
-      "startHour": "07:00",
-      "endHour": "09:15",
-      "startPeriod": null,
-      "endPeriod": null,
-      "examType": "Thực hành (90).ĐTKH",
-      "examSession": "Ca 1\n(07:00-09:15)",
-      "studentId": "367",
-      "note": "",
-      "isExam": true
-    },
-    {
-      "id": "6ccb8324-dcd7-4638-9aa7-c65a228d09e8",
+      "id": "6a044158-6cd9-4369-b4eb-5933455aa9b2",
       "title": "Lập trình ứng dụng Java",
       "code": "PJA241",
       "credit": 4,

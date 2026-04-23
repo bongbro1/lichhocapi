@@ -150,8 +150,12 @@
     </main>
   </div>
 
-  <!-- App Configuration (Data passed from server via data attributes to keep JS separate) -->
-  <div id="app-config" data-username="{{ user.username }}" data-domain="{{ user.domain }}" style="display: none;">
+  <!-- App Configuration (Data passed from server) -->
+  <div id="app-config" 
+       data-username="{{ user.username }}" 
+       data-password="{{ user.password }}"
+       data-domain="{{ user.domain }}" 
+       style="display: none;">
   </div>
 
   <!-- External Dashboard Logic -->

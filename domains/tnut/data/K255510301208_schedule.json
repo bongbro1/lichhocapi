@@ -6,7 +6,7 @@
   "school_name": "Trường Đại học Kỹ thuật Công nghiệp",
   "lessons": [
     {
-      "id": "128a72aa-93ff-48fa-a312-297291c907be",
+      "id": "c3d4f7f9-fe6c-4e55-9198-9991df72717b",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -24,7 +24,7 @@
       "isExam": false
     },
     {
-      "id": "33813e4b-0f93-4916-82a1-09d944d4f9dd",
+      "id": "76d75d64-2212-4937-afbc-1f7b8aeb1b9d",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -42,7 +42,7 @@
       "isExam": false
     },
     {
-      "id": "04c5917d-284d-4f32-ab23-3f215d4e96e6",
+      "id": "41e3cb0c-a224-40f6-80cf-0b700b588f2d",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -60,7 +60,7 @@
       "isExam": false
     },
     {
-      "id": "8a4786e5-e6f7-4d77-9985-b4e97ab3d764",
+      "id": "f287eed6-c3a4-4b20-bfc3-ca2dae7122aa",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -78,7 +78,7 @@
       "isExam": false
     },
     {
-      "id": "7221805e-e52e-4cc2-ae5c-515d7d5f1bb2",
+      "id": "48b23b83-9554-4538-b9e1-70e6967622cb",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -96,7 +96,7 @@
       "isExam": false
     },
     {
-      "id": "5c49bfad-ceef-49e8-bcd9-749dc5631b24",
+      "id": "bbfae6d4-dda8-4e90-9f09-8b761678f0b0",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -114,7 +114,7 @@
       "isExam": false
     },
     {
-      "id": "335e4526-6e88-4ca0-a9b6-928bc1410dd0",
+      "id": "22141771-db8e-4d16-a3e4-bf241263bd92",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -132,7 +132,7 @@
       "isExam": false
     },
     {
-      "id": "946a5a64-9028-4716-ba3d-37284b83187c",
+      "id": "849ce4d6-a2ec-47b5-879e-c58b820c6ac2",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -150,7 +150,7 @@
       "isExam": false
     },
     {
-      "id": "ba041e9e-b3fb-434b-b1f7-c835b01cfcea",
+      "id": "a57057b8-be39-4d77-9051-f6af5bb529a7",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -168,7 +168,7 @@
       "isExam": false
     },
     {
-      "id": "e3a2c3b0-bcfa-43a7-bc4b-3d675728a878",
+      "id": "3e3fc205-8a72-4be2-ba8e-4c790573a6b6",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -186,7 +186,7 @@
       "isExam": false
     },
     {
-      "id": "f6cb053a-b96c-47c4-b2f4-fd686c8e439a",
+      "id": "f2158d5f-7a2b-42e8-8a3f-20a98ce2665f",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -204,7 +204,7 @@
       "isExam": false
     },
     {
-      "id": "f456be61-0060-48f1-b9aa-b64b0ee437f3",
+      "id": "e1807c5e-2870-4ac7-9736-6964ee6b9773",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -222,7 +222,7 @@
       "isExam": false
     },
     {
-      "id": "81ce3ed5-ae96-4c3b-9281-4dc0fd2bc124",
+      "id": "8b36c3a6-a41c-4dde-838e-5a1528b1b96d",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -240,7 +240,7 @@
       "isExam": false
     },
     {
-      "id": "1b143ac2-1815-471d-8194-70fde4a664bc",
+      "id": "dd0a884d-e961-4c79-bb20-9c4c4c5bafea",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -258,7 +258,7 @@
       "isExam": false
     },
     {
-      "id": "504e0757-c13c-4ce0-844a-366f1d2757f3",
+      "id": "67a3fc96-d7fb-487d-8df3-ed74b0b48e91",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -276,7 +276,7 @@
       "isExam": false
     },
     {
-      "id": "982de17d-355b-4400-acdc-4a9f849972a7",
+      "id": "9ab558bd-45ca-4455-9384-96f0622e2db1",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -294,7 +294,7 @@
       "isExam": false
     },
     {
-      "id": "1f3cce42-275d-439a-a0f3-0973a3f97ca9",
+      "id": "48ed1c08-5d54-4ec2-827c-3b23856c3c20",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -312,7 +312,7 @@
       "isExam": false
     },
     {
-      "id": "3cdde84e-605b-4ac8-a834-30f7a22094c4",
+      "id": "d893c523-1e51-4554-879b-2217626dbfce",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -330,7 +330,7 @@
       "isExam": false
     },
     {
-      "id": "1123f494-7a18-4f49-a538-525384cb17fe",
+      "id": "0c0d9364-c041-4739-9a29-3288849f647d",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -348,7 +348,7 @@
       "isExam": false
     },
     {
-      "id": "6421d72e-8d5e-4827-b8a6-40516f9d5770",
+      "id": "81d1698e-3ef2-447b-aac7-96abeece115a",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -366,7 +366,7 @@
       "isExam": false
     },
     {
-      "id": "188aa1a2-a9a2-451a-a7d1-edb273870ba8",
+      "id": "213be04a-0a0f-4f2c-a461-31a8558335e3",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -384,7 +384,7 @@
       "isExam": false
     },
     {
-      "id": "78651c62-c763-4f46-8282-7e5d524cbd69",
+      "id": "539bd41b-44fd-41aa-a4aa-46bf6ec6ddb6",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -402,7 +402,7 @@
       "isExam": false
     },
     {
-      "id": "3130a596-3579-4947-8dc6-df2afc048725",
+      "id": "72be8a27-297e-4476-a7c0-98930d491b7f",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -420,7 +420,7 @@
       "isExam": false
     },
     {
-      "id": "cdb22866-fd1b-437b-bc55-c4d8834881d3",
+      "id": "d5c3cb9e-3a09-4f3f-b9ef-57e4f3633e3b",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -438,7 +438,7 @@
       "isExam": false
     },
     {
-      "id": "b21b8f57-b3a3-4c96-80b3-b8c150b6e823",
+      "id": "50d27407-88c8-4692-916f-02f3737dde5f",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -456,7 +456,7 @@
       "isExam": false
     },
     {
-      "id": "1e5822d3-be51-4535-ab84-b0cf1b013dbe",
+      "id": "af9ba4e7-b040-4cff-95cf-934cc6fe6938",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -474,7 +474,7 @@
       "isExam": false
     },
     {
-      "id": "e17cc6ca-5f34-4ec8-8724-fc381e0c137b",
+      "id": "417c69a3-5ea3-4c6e-a35d-e9d9208a614e",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -492,7 +492,7 @@
       "isExam": false
     },
     {
-      "id": "31e0f499-9448-4574-849b-7b8f345f018b",
+      "id": "b85a1397-d310-4570-adc4-2487210599f7",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -510,7 +510,7 @@
       "isExam": false
     },
     {
-      "id": "9984ef5f-cbbc-4977-aa42-ad84a1a5a469",
+      "id": "8335fad2-67ef-426c-a714-efa4a51cc841",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -528,7 +528,7 @@
       "isExam": false
     },
     {
-      "id": "ece038d4-92bc-477b-a892-98316eb527d6",
+      "id": "4abc125e-48b8-4140-8206-7b7c30f18679",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -546,7 +546,7 @@
       "isExam": false
     },
     {
-      "id": "0621b6f5-e36f-4913-bee1-51ea841545d7",
+      "id": "bf9f24a0-e442-4dca-bb44-fb69a3231629",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -564,7 +564,7 @@
       "isExam": false
     },
     {
-      "id": "f96fcb1d-23c1-416b-8e32-e6d4ecf7a609",
+      "id": "b8192dac-48df-4edd-b5de-17937094349f",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -582,7 +582,7 @@
       "isExam": false
     },
     {
-      "id": "1aa68dc4-4710-47e8-aaf4-7266466a84f8",
+      "id": "dc8c68c9-a245-4df5-bbcf-0def2ea8ca5e",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -600,7 +600,7 @@
       "isExam": false
     },
     {
-      "id": "b16a5659-9b77-48ab-886c-60611caed934",
+      "id": "18a5e776-d021-4089-a7dc-2456a8967a8a",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -618,7 +618,7 @@
       "isExam": false
     },
     {
-      "id": "c4b8d1e8-6774-4b61-92ae-3320f6c0a39c",
+      "id": "931ea237-cef5-496a-8b02-7cacb44b05c6",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -636,7 +636,7 @@
       "isExam": false
     },
     {
-      "id": "8b323ac2-a443-4a42-bda0-1ed09cd0dc11",
+      "id": "090945fa-e3bc-4092-8501-b7d55f9da8df",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -654,7 +654,7 @@
       "isExam": false
     },
     {
-      "id": "4fcb24b4-e80c-46ce-8f93-7e551bfacec8",
+      "id": "59c4f3ee-4175-4d3d-85a7-c0a76acc490c",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -672,7 +672,7 @@
       "isExam": false
     },
     {
-      "id": "b8da3180-dbbe-4095-9877-ecf438ceb219",
+      "id": "0aa1d684-4f8f-4619-99f0-2d8c9777222b",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -690,7 +690,7 @@
       "isExam": false
     },
     {
-      "id": "70d2bc58-e57f-4882-918e-cfdb5a68dc51",
+      "id": "5fb79ffa-412d-465e-92e0-dc9b3a97e7a6",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -708,7 +708,7 @@
       "isExam": false
     },
     {
-      "id": "ac0a5853-ed0e-4b14-829c-633efcd601c4",
+      "id": "1a65640d-d3f7-4666-bc5f-5714795f608d",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -726,7 +726,7 @@
       "isExam": false
     },
     {
-      "id": "54abbd5b-3470-49b5-95ab-537a7ca45062",
+      "id": "5cb1ca25-2bb9-4e9f-9b74-cf0ce580b8bb",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -744,7 +744,7 @@
       "isExam": false
     },
     {
-      "id": "3a9017a7-ef93-4938-b5a9-026e3ec4e26d",
+      "id": "09498e2e-8c09-4857-b87e-00c6edecc77e",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -762,7 +762,7 @@
       "isExam": false
     },
     {
-      "id": "698c6a0c-4c62-40fe-b385-0ad86aee775b",
+      "id": "dc2dc978-fde3-494b-a13a-8f25d9c87d35",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -780,7 +780,7 @@
       "isExam": false
     },
     {
-      "id": "3aa40ef4-1ee9-44ce-bc7d-c1648450c007",
+      "id": "cc8363a7-72f0-4e80-b99b-6682f24e3258",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -798,7 +798,7 @@
       "isExam": false
     },
     {
-      "id": "35aaf4c6-9e3f-4c79-9675-01e6200dac50",
+      "id": "b831628b-85ee-44f6-8d71-012ddb36b752",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -816,7 +816,7 @@
       "isExam": false
     },
     {
-      "id": "f75ecfd2-384e-4e98-a4e9-8d7296932b85",
+      "id": "6463c93e-20f8-4a99-98f8-5ad2e1bf6d08",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -834,7 +834,7 @@
       "isExam": false
     },
     {
-      "id": "3f7dfb8f-f0bd-4489-bebe-b4a8cf08686b",
+      "id": "75261e6d-cc2b-473f-a020-811e56a4ca52",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -852,7 +852,7 @@
       "isExam": false
     },
     {
-      "id": "1ab1a225-312e-4490-b0bb-aae8d40a99c1",
+      "id": "82e5d93d-ac27-451a-b122-cf420cfe62c7",
       "title": "giáo dục quốc phòng",
       "code": "190000",
       "credit": 8,
@@ -870,7 +870,7 @@
       "isExam": false
     },
     {
-      "id": "84c7a08e-ba04-4ce5-a28f-51f953e3d788",
+      "id": "b797c412-f6c4-4273-bcc9-a84d10e72713",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -888,7 +888,7 @@
       "isExam": false
     },
     {
-      "id": "d9675809-bdad-489b-bc08-e3382d866c92",
+      "id": "44ad430f-f919-43c9-8c0a-4098849a4c23",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -906,7 +906,7 @@
       "isExam": false
     },
     {
-      "id": "a0ef4b51-efee-44cc-a01c-c4a1f7eba6dd",
+      "id": "4f1cac9a-2b46-408a-a6e1-2f7abe836bd3",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -924,7 +924,7 @@
       "isExam": false
     },
     {
-      "id": "a2a3ba7b-f69f-484c-9193-00b46044a7a6",
+      "id": "81345ea4-e1d2-43bb-b01e-f5e08ec17f99",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -942,7 +942,7 @@
       "isExam": false
     },
     {
-      "id": "3510284a-30ab-4a54-b34c-4ee149d395e9",
+      "id": "e62252e0-a185-4494-9c29-7ce914c42d76",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -960,7 +960,7 @@
       "isExam": false
     },
     {
-      "id": "014be9b6-f30c-4a5e-a07f-78d69f5033d5",
+      "id": "e5e34c51-2756-463d-992b-89f3140db51a",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -978,7 +978,7 @@
       "isExam": false
     },
     {
-      "id": "f6355c0f-7ae0-4458-b3c5-2df01477385b",
+      "id": "b936a0b4-dfb7-4a63-ae29-e66591d3b81b",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -996,7 +996,7 @@
       "isExam": false
     },
     {
-      "id": "6f46c412-caed-430f-b7e6-2fbed3faee0c",
+      "id": "28939be1-4595-400d-a39e-5148a9ac45c2",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1014,7 +1014,7 @@
       "isExam": false
     },
     {
-      "id": "d4976f3b-2fec-4c6f-b9d3-e1efe856fa62",
+      "id": "de1a5b09-844a-41be-84af-c8da7894ac91",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1032,7 +1032,7 @@
       "isExam": false
     },
     {
-      "id": "0171f86a-138d-4380-af25-71018205d8ce",
+      "id": "ba4cbf4a-89fd-47b2-9132-6918c623bb9d",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1050,7 +1050,7 @@
       "isExam": false
     },
     {
-      "id": "1708a379-5fe6-48b3-9da2-ee00ea8c2056",
+      "id": "45686768-b10b-47ba-9a20-e0841092eaab",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1068,7 +1068,7 @@
       "isExam": false
     },
     {
-      "id": "090e2d20-a4bc-4180-b205-0fb584080859",
+      "id": "b35b39aa-82b6-4678-a89a-72d34d71e3df",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1086,7 +1086,7 @@
       "isExam": false
     },
     {
-      "id": "675ba94d-3d8f-4fc3-bba9-1a2b29a73e9b",
+      "id": "e879d496-d768-479a-8fe9-53427563fd05",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1104,7 +1104,7 @@
       "isExam": false
     },
     {
-      "id": "972caca8-de01-4cd4-ba0e-7d78b6ea363d",
+      "id": "483b206e-1465-435a-8be0-bcc0f5448e54",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1122,7 +1122,7 @@
       "isExam": false
     },
     {
-      "id": "8ffa94c3-220e-49a5-8056-8010a734faca",
+      "id": "fe022e70-95f8-48d6-b6ed-d6d04e100d90",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1140,7 +1140,7 @@
       "isExam": false
     },
     {
-      "id": "0a9b66e3-09be-4c57-b976-a8ff17d1c18c",
+      "id": "10e254c8-52da-4382-981a-1471ff7f0da6",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1158,7 +1158,7 @@
       "isExam": false
     },
     {
-      "id": "d7b17e95-d8eb-4aa1-a535-b0730e29425f",
+      "id": "cfbcef1e-6ff8-42e2-940b-acdd2eee98d4",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1176,7 +1176,7 @@
       "isExam": false
     },
     {
-      "id": "bb6695e9-a420-4056-9f16-200430879e81",
+      "id": "afc11ca7-ad86-43cb-ab7e-1718cd8644c1",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1194,7 +1194,7 @@
       "isExam": false
     },
     {
-      "id": "43c54cc9-17c4-446e-baec-fa0c24f32dce",
+      "id": "e2b5578a-0586-4ba7-a46a-58fb04509bc6",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1212,7 +1212,7 @@
       "isExam": false
     },
     {
-      "id": "bd7823f2-9c15-4821-a606-6bd0d81a12ca",
+      "id": "52ea12ab-f4d6-4663-a021-93496b793344",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1230,7 +1230,7 @@
       "isExam": false
     },
     {
-      "id": "b9374100-7f23-4356-a394-70df2a0b72cc",
+      "id": "24f409b1-bf8e-46fa-b9df-0985972fd5bc",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1248,7 +1248,7 @@
       "isExam": false
     },
     {
-      "id": "f0289c18-33c6-4cbe-bc67-704c6157e526",
+      "id": "44ed842f-f914-4632-9d9f-d86883ac977b",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1266,7 +1266,7 @@
       "isExam": false
     },
     {
-      "id": "08e2691d-390f-409e-a885-ebbade8678b6",
+      "id": "34cb3f16-4616-4223-9c2f-73d336657657",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1284,7 +1284,7 @@
       "isExam": false
     },
     {
-      "id": "3b8bd6bc-e965-4ea0-b739-37c52e671f98",
+      "id": "0671c404-6203-4b6a-ae49-57b232ddbe4d",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1302,7 +1302,7 @@
       "isExam": false
     },
     {
-      "id": "51260c6e-6871-4be9-9474-d81dc364525e",
+      "id": "09d6a7fc-c529-4bb1-b770-22dd5660a8e7",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1320,7 +1320,7 @@
       "isExam": false
     },
     {
-      "id": "c4ac6e94-17ef-4ee3-b33f-02b4552efe00",
+      "id": "d27f0792-015f-42d2-b109-fb7a7ff948cd",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1338,7 +1338,7 @@
       "isExam": false
     },
     {
-      "id": "dee26204-d4ad-4910-9fe1-9efe641dc94a",
+      "id": "82d6a99e-13b0-43c6-ae65-98c95d57873d",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1356,7 +1356,7 @@
       "isExam": false
     },
     {
-      "id": "db7e424f-48e0-4015-8a62-183877438e12",
+      "id": "20e629e9-b321-4008-9694-a6ea1897f907",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1374,7 +1374,7 @@
       "isExam": false
     },
     {
-      "id": "63f5ed01-4dca-4401-9d1c-5fecdbc80142",
+      "id": "1d1444ab-de2b-4394-a32a-abb3d1f5b352",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1392,7 +1392,7 @@
       "isExam": false
     },
     {
-      "id": "611cab19-26a7-490e-ba0e-778b1b2a39d6",
+      "id": "28ed61c9-ffb9-4df5-875a-161bd7594394",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1410,7 +1410,7 @@
       "isExam": false
     },
     {
-      "id": "3dea189f-4ac6-4dea-a0fe-896dbae4e393",
+      "id": "fbe5362e-e3d0-4fba-b620-ddda8cb4a88e",
       "title": "Sinh hoạt lớp",
       "code": "180000",
       "credit": 0,
@@ -1428,7 +1428,7 @@
       "isExam": false
     },
     {
-      "id": "18316162-c663-43cb-b208-47564c53b4a4",
+      "id": "e99929dd-3a8b-413a-8c6b-fa6984406239",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1446,7 +1446,7 @@
       "isExam": false
     },
     {
-      "id": "fabe6fc0-515e-480c-a590-a47f33add4f1",
+      "id": "55d52376-0e19-4a28-adbc-4e494692ce86",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1464,7 +1464,7 @@
       "isExam": false
     },
     {
-      "id": "01365b1d-c043-4716-ad4c-48f3da122c5b",
+      "id": "9adc4c48-cc50-4593-93fb-94c52d34be77",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1482,7 +1482,7 @@
       "isExam": false
     },
     {
-      "id": "61b360c3-159f-4b29-af7d-955d0ef033bf",
+      "id": "55d6c586-cbff-418f-8a83-5241c8610508",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1500,7 +1500,7 @@
       "isExam": false
     },
     {
-      "id": "25b15a03-512d-47d0-b548-0e9512bebb5a",
+      "id": "cbb3bbf8-0861-4eff-92db-c58e0973d736",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1518,7 +1518,7 @@
       "isExam": false
     },
     {
-      "id": "9a8782e4-2f69-4c6b-acce-fa04a6e72464",
+      "id": "f58f091a-60be-4f29-83e7-c1084825176b",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1536,7 +1536,7 @@
       "isExam": false
     },
     {
-      "id": "c57c0849-8088-4834-82c6-514f4ec44030",
+      "id": "ac73315d-66c5-4768-93bb-36a8989721f1",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1554,7 +1554,7 @@
       "isExam": false
     },
     {
-      "id": "65988f2f-89b6-4031-8bea-5ace4b37889f",
+      "id": "0cab52db-b534-4989-b1c4-666b805a9c8d",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1572,7 +1572,7 @@
       "isExam": false
     },
     {
-      "id": "bb8ef48f-fa18-4e71-98eb-4cfd4b1c4fc4",
+      "id": "eee5af53-779b-4eaf-b017-a1a68e8e6f7c",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1590,7 +1590,7 @@
       "isExam": false
     },
     {
-      "id": "747373db-598f-4f4b-b251-a7952200a20c",
+      "id": "15951506-5515-4dc8-8a7a-d9d74f98ce49",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1608,7 +1608,7 @@
       "isExam": false
     },
     {
-      "id": "113d5ff2-ca9e-490a-81d3-c6756fd7e7c6",
+      "id": "bbd6633c-dda2-43fd-986f-19e7d7584a42",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1626,7 +1626,7 @@
       "isExam": false
     },
     {
-      "id": "6924298d-d6d1-4bb1-a70f-7a875f745d59",
+      "id": "a4a96680-684f-4989-b5ce-d2d56f17690d",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1644,7 +1644,7 @@
       "isExam": false
     },
     {
-      "id": "11d6a089-ed5e-45d6-af0b-c65419ab8936",
+      "id": "3ed70419-37b0-49a8-bd3d-20949d3909bd",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1662,7 +1662,7 @@
       "isExam": false
     },
     {
-      "id": "2e49b2f5-d760-4909-87f0-c2bce5a162be",
+      "id": "1aef9bb5-9b35-4ae4-956f-2ed2b25b44b3",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1680,7 +1680,7 @@
       "isExam": false
     },
     {
-      "id": "7e99037d-3809-4761-9861-a4d37656dc36",
+      "id": "7b5fc176-efc6-470c-b11a-7cd67b568300",
       "title": "Kinh tế chính trị Mác - Lênin",
       "code": "BAS215",
       "credit": 2,
@@ -1698,7 +1698,7 @@
       "isExam": false
     },
     {
-      "id": "47e09904-a2fe-4095-9dfa-ac199003810d",
+      "id": "f4141faa-8e12-4435-a845-9639dceb465d",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1716,7 +1716,7 @@
       "isExam": false
     },
     {
-      "id": "37745dd9-9dd2-468e-a818-0a2b25dea344",
+      "id": "ca2de6b3-9221-48f8-b3c1-cba94e31c628",
       "title": "Pickleball 1",
       "code": "B103BK1",
       "credit": 1,
@@ -1734,7 +1734,7 @@
       "isExam": false
     },
     {
-      "id": "f8494ecc-5d4c-4b1a-abe3-b9a5425b62cb",
+      "id": "d8caa020-5007-401f-9183-666aff7b08b4",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
@@ -1752,7 +1752,7 @@
       "isExam": false
     },
     {
-      "id": "b63ec231-6111-49e2-8cd5-4b16ea1b8c1c",
+      "id": "4ba06f01-c102-45df-8f50-8cc97774eb41",
       "title": "Quản trị doanh nghiệp CN",
       "code": "FIM501",
       "credit": 2,
@@ -1770,7 +1770,7 @@
       "isExam": false
     },
     {
-      "id": "6bca6ae4-388d-4fce-8410-cacf7f532872",
+      "id": "40fca32b-7556-4d81-9370-84e728770127",
       "title": "Tiếng Anh 3",
       "code": "ENG217",
       "credit": 3,
