@@ -1,0 +1,11 @@
+xlrd
+flask
+flask-cors
+beautifulsoup4
+pandas
+requests
+httpx
+gunicorn
+agora-token-builder
+firebase-admin
+openpyxl

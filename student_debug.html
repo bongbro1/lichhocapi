@@ -1,0 +1,786 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>.: Bảng điểm :.</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=.5)">
+		<link rel="stylesheet" type="text/css" href="Includes/bootstrap-3.3.4-dist/css/bootstrap.min.css"> <!-- them -->
+		<LINK href="Includes/Default.css" type="text/css" rel="stylesheet">
+		<script src="Includes/Default.js" type="text/javascript"></script>
+		<script src="Includes/util.js" type="text/javascript"></script>
+		<script language="javascript" src="Includes/dynCalendar.js" type="text/javascript"></script>
+		<script>
+			function PageLoad(){
+				var tbl = document.getElementById("tblStudentMark");
+				if(tbl.offsetWidth < document.getElementById("divData").offsetWidth)
+					tbl.style.width = "100%";//document.getElementById("divData").offsetWidth - 10;
+			}
+		</script>
+	</HEAD>
+	<body bgProperties="fixed" leftMargin="5" background="../Images/bamboo.gif" topMargin="0"
+		onload="PageLoad();" rightMargin="5">
+		<style>			
+		.input_text { WIDTH: 30% }			
+		.label { FONT-SIZE: 12px; FLOAT: left; TEXT-ALIGN: left; MARGIN-RIGHT: 10px }			
+		LEGEND { FONT-SIZE: 15px; FONT-WEIGHT: bolder; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; MARGIN: 5px; PADDING-RIGHT: 5px }			
+		TABLE { MARGIN: 10px auto }			
+		</style>
+		<form method="post" action="./StudentMark.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="847C6F44" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="2rrDFTvP+s17sFJuN6xBJKAn4M1RpiOZ5HDHE5W6kbzTUeTZeOW0TsoN2VUH1OX6AmqDiucxASUswoKP9/bmFvrApKMki282Gh5F7mnCE7IuDDvOVj02KTF3S45rWX0ORLDKDXUomdObAJVckrUiaosc8SNWiAQ8MUHtPmfxPry52CL53m/tXdquse1qDl3M+ECXVtEKSLP77OB2vH8ByXmkSMPikcwsYUD6YrbcDT1ap/UQQouwBbyBQYatz/gtm8/O2whX/6PQ303ZXG5/uISvwVMq29pLCbxdA0PtH7qjCkSKfC+O3ZB9Bko9DQJt9mziLcfeXZr+agw62wbKDEwsIWyKz6kkB2/D0lAMA06urLK8RWpxph8wrAIcpwnHwNnRlRmLDgDp/q8thu8AALRxEC0+nGlbuc32v44ya68ks0KXjLnTpam94XUf4jH5gRkOylz8zAhOaWdbczH4kD7LUYu/wymQcw5RDAqlW3Tcczr1/FyHy8h+l5K8Zimf3QUw2Xcb9F1G0OAKN3KZwBIAdjRjqlUHTIiKBy/zRUSpw4yyIRNEV/It0DSZ9PrlZ08n11HxM73uOeuB+WiMfQ==" />
+			
+<style>
+	.notify { BORDER-BOTTOM: #336699 1px solid; POSITION: fixed; MIN-WIDTH: 300px; BORDER-LEFT: #336699 1px solid; PADDING-BOTTOM: 8px; BACKGROUND-COLOR: #ffd700; MIN-HEIGHT: 100px; PADDING-LEFT: 8px; BOTTOM: 10px; PADDING-RIGHT: 8px; COLOR: red; BORDER-TOP: #336699 1px solid; RIGHT: 10px; BORDER-RIGHT: #336699 1px solid; PADDING-TOP: 8px; z-index:99999 }
+	.notifimg { POSITION: fixed; BOTTOM: 10px; RIGHT: 10px; z-index:99999 }
+</style>
+
+<div id="headerright">
+	<div id="header">
+		<div style="POSITION: absolute;FONT-FAMILY: -webkit-body;COLOR: white;FONT-SIZE: 18px;TOP: 32px;FONT-WEIGHT: bold;LEFT: 8px">
+			<span id="PageHeader1_lblWebtitle">TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN & TRUYỀN THÔNG - ĐẠI HỌC THÁI NGUYÊN</span></div>
+		<span id="navbar"><a href="/kcntt/Home.aspx" >Trang chủ</a> |
+			<a id="PageHeader1_SignOut_ibnLogout" href="javascript:__doPostBack(&#39;PageHeader1$SignOut$ibnLogout&#39;,&#39;&#39;)"><font color="White">Thoát</font></a>
+
+			| <a href="./support/default.aspx" target="_blank">Hỏi đáp</a> | <a href="/CMCSoft.IU.Web.Info/WebHelp/NewProject1.htm" target="_blank">
+				Trợ giúp</a>
+			<select name="PageHeader1$drpNgonNgu" id="PageHeader1_drpNgonNgu" style="Z-INDEX: 0">
+	<option selected="selected" value="010527EFBEB84BCA8919321CFD5C3A34">VN</option>
+
+</select>
+		</span>
+		<DIV id="box_size"><!--
+			<a href="javascript:decreaseFontSize();">
+				<h4 id="decreaseFontSize"></h4>
+			</a><a href="javascript:increaseFontSize();">
+				<h4 id="increaseFontSize"></h4>
+			</a>
+		--><SPAN id="ur" style="FONT-SIZE: 14px; FONT-WEIGHT: bold"></SPAN></DIV>
+		<DIV id="box_user">
+			<DIV style="WIDTH: 5px; DISPLAY: none; FLOAT: left; HEIGHT: 40px; PADDING-TOP: 2px">
+				<img id="PageHeader1_imgUser" src="/kcntt/Images/UserInfo.gif" border="0" style="DISPLAY: block; FLOAT: left" /></DIV>
+			<div id="PageHeader1_Panel1" style="TEXT-ALIGN: right; MARGIN-TOP: 2px">
+	
+				<P>
+					<span id="PageHeader1_lblUserFullName"><b><font color="Blue">Trần Đình Phú(DTC235200588)</font></b></span>
+					<span id="PageHeader1_lblRoleTitle">Vai trò:</span>
+					<span id="PageHeader1_lblUserRole"><font color="Blue">Sinh viên</font></span>
+					
+					<a id="PageHeader1_lbNewmessage" href="javascript:__doPostBack(&#39;PageHeader1$lbNewmessage&#39;,&#39;&#39;)" style="FONT-SIZE: 10px"><font color="Blue">Hộp tin nhắn</font></a></P>
+			
+</div></DIV>
+		<DIV id="datetime" style="DISPLAY: none">[
+			<span id="PageHeader1_lblDatetime"><b>Datetime</b></span>]</DIV>
+		<DIV id="navigator">
+			<span id="PageHeader1_lblNavi"> <span style="font-size:10px">></span> <a href="/kcntt/StudentMark.aspx">Tra cứu điểm</a></span></DIV>
+	</div>
+</div>
+<input name="PageHeader1$hidisNotify" type="hidden" id="PageHeader1_hidisNotify" value="0" />
+<input name="PageHeader1$hidValueNotify" type="hidden" id="PageHeader1_hidValueNotify" value="0" />
+<div class="notify" id="notify" style="DISPLAY:none">
+</div>
+<img class="notifimg" id="notifimg" src="new_icon.gif" style="DISPLAY:none">
+<script type="text/javascript">
+			checkNotify();
+			function checkNotify()
+			{
+				var isNotify = "0";
+				isNotify = document.getElementById("PageHeader1_hidisNotify").value;
+				if (isNotify=="1")
+				{						
+					try {
+						//viet ham kiem tra
+						if(document.getElementById("PageHeader1_hidValueNotify") != undefined)
+						{
+							var hidValue = document.getElementById("PageHeader1_hidValueNotify").value;
+							if (hidValue == null)
+							{
+								hidValue = "";
+							}				
+							document.getElementById("notify").style.display = "";
+							document.getElementById("notifimg").style.display = "";
+							document.getElementById("notify").innerHTML = hidValue;
+						}
+					}
+					catch(err) {
+						document.getElementById("demo").innerHTML = err.message;
+					}
+					
+				}
+			}
+</script>
+
+			<script src="Includes/jquery-1.9.1.js"></script> <!-- them -->
+			<script src="Includes/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script> <!-- them -->
+			<link rel="stylesheet" type="text/css" href="Includes/bootstrap-3.3.4-dist/css/bootstrap-multiselect.css"> <!-- them -->
+			<script src="Includes/bootstrap-3.3.4-dist/js/bootstrap-multiselect.js"></script> <!-- them -->
+			<script type="text/javascript">			
+			 jQuery(function () {				
+				jQuery('[id*=drpSemester]').multiselect({
+					includeSelectAllOption: true
+				});				
+			});						
+			</script> <!-- them -->
+			
+			
+			<TABLE id="Table3" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<TD vAlign="top" width="90%" height="100%">
+						<TABLE id="Table9" height="100%" cellSpacing="0" cellPadding="0" width="100%">
+							<TR>
+								<TD style="FILTER: progid: DXImageTransform.Microsoft.Gradient(startColorStr='#0a6cce', endColorStr='#ffffff', gradientType='1')"
+									align="center">
+									
+
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Mã sinh viên:</label></div>
+					<div class="col-md-2"><span id="lblStudentCode" class="form-control-lable-value">DTC235200588</span></div>
+					<div class="col-md-1"><label class="form-control-lable">Họ tên:</label></div>
+					<div class="col-md-3"><span id="lblStudentName" class="form-control-lable-value">Trần Đình Phú</span></div>
+					<div class="col-md-2"><label class="form-control-lable">Trạng thái:</label></div>
+					<div class="col-md-2"><span id="lblstudentstatus" class="form-control-lable-value">ĐANG HỌC</span></div>
+				</div>
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Khóa:</label></div>
+					<div class="col-md-2"><span id="lblAy" class="form-control-lable-value">K22_CQ</span></div>
+					<div class="col-md-1"><label class="form-control-lable">Ngành:</label></div>
+					<div class="col-md-3"><select name="drpField" id="drpField" class="form-control">
+	<option selected="selected" value="47105E26A07746C1BAA3AFDAB14F4623">C&#244;ng nghệ th&#244;ng tin</option>
+
+</select></div>
+					<div class="col-md-2"><label class="form-control-lable">Lớp:</label></div>
+					<div class="col-md-2"><span id="lblAdminClass" class="form-control-lable-value">CNTT K22E</span></div>
+				</div>
+				<div class="row">
+					<div class="col-md-2"><label class="form-control-lable">Chọn học kỳ:</label></div>
+					<div class="col-md-2"><select name="drpHK" id="drpHK" class="form-control">
+	<option selected="selected" value="">---</option>
+	<option value="2023_2024_1">2023_2024_1</option>
+	<option value="2023_2024_2">2023_2024_2</option>
+	<option value="2024_2025_1">2024_2025_1</option>
+	<option value="2024_2025_2">2024_2025_2</option>
+
+</select></div>
+					<div class="col-md-1"><label class="form-control-lable">Lọc:</label></div>
+					<div class="col-md-7"><select name="drpFilter" id="drpFilter" class="form-control">
+	<option selected="selected" value="1">Xem những học phần đ&#227; c&#243; điểm v&#224; nằm trong chương tr&#236;nh học</option>
+	<option value="2">Xem những học phần đ&#227; c&#243; điểm nhưng chưa ĐẠT v&#224; nằm trong chương tr&#236;nh học</option>
+	<option value="3">Xem những học phần đ&#227; c&#243; điểm v&#224; ĐẠT v&#224; nằm trong chương tr&#236;nh học</option>
+	<option value="4">Xem những học phần nằm trong chương tr&#236;nh học nhưng chưa học</option>
+	<option value="5">Tất cả c&#225;c học phần đ&#227; c&#243; điểm</option>
+	<option value="6">Xem c&#225;c học phần nằm trong CTĐT v&#224; được c&#244;ng nhận l&#224; m&#244;n t&#237;nh điểm x&#233;t tốt nghiệp</option>
+
+</select></div>
+				</div>
+				<input name="hidSymbolMark" type="hidden" id="hidSymbolMark" value="1" /> <input name="hidFieldId" type="hidden" id="hidFieldId" value="47105E26A07746C1BAA3AFDAB14F4623" />
+				<input name="hidFieldName" type="hidden" id="hidFieldName" value="Công nghệ thông tin" /> <input name="hidStudentId" type="hidden" id="hidStudentId" value="FE9F4232F3714F2D98722166558E27F9" />
+				<div class="row">
+					<div class="col-md-12"><label class="form-control-lable-value">BẢNG ĐIỂM TRUNG BÌNH HỌC 
+							TẬP NĂM HỌC, HỌC KỲ, TOÀN KHÓA:</label></div>
+				</div>
+			</div>
+			<TABLE class="tableborder" id="tblSumMark" cellSpacing="0" cellPadding="0" width="100%"
+				border="0">
+				<TBODY>
+					<TR>
+						<TD>
+							<table cellspacing="0" cellpadding="0" rules="all" bordercolor="RosyBrown" id="grdResult" width="100%" style="Z-INDEX: 0">
+	<tr align="center">
+		<td class="cssListHeader" align="center" width="12%"><font color="White">Năm học</font></td><td class="cssListHeader" align="center" width="6%"><font color="White">Học kỳ</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBTL Hệ 10 N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBTL Hệ 10 N2</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBTL Hệ4 N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBTL Hệ4 N2</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">Số TCTL N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">Số TCTL N2</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBC Hệ 10 N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBC Hệ 10 N2</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBC Hệ4 N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">TBC Hệ4 N2</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">Số TC N1</font></td><td class="cssListHeader" align="center" width="8%"><font color="White">Số TC N2</font></td>
+	</tr><tr class="cssListItem">
+		<td align="center">2023_2024</td><td align="center">1</td><td align="center">7.13</td><td align="center">&nbsp;</td><td align="center">2.40</td><td align="center">&nbsp;</td><td align="center">15</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_0">7.13</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_0"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_0">2.40</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_0"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_0">15</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_0"></span>
+										</td>
+	</tr><tr class="cssListAlternativeItem">
+		<td align="center">2023_2024</td><td align="center">2</td><td align="center">6.13</td><td align="center">&nbsp;</td><td align="center">1.82</td><td align="center">&nbsp;</td><td align="center">17</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_1">6.13</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_1"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_1">1.82</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_1"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_1">17</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_1"></span>
+										</td>
+	</tr><tr class="cssListItem">
+		<td align="center">2023_2024</td><td align="center">Cả Năm</td><td align="center">6.60</td><td align="center">&nbsp;</td><td align="center">2.09</td><td align="center">&nbsp;</td><td align="center">32</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_2">6.60</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_2"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_2">2.09</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_2"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_2">32</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_2"></span>
+										</td>
+	</tr><tr class="cssListAlternativeItem">
+		<td align="center">2024_2025</td><td align="center">1</td><td align="center">7.31</td><td align="center">&nbsp;</td><td align="center">2.82</td><td align="center">&nbsp;</td><td align="center">17</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_3">7.31</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_3"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_3">2.82</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_3"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_3">17</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_3"></span>
+										</td>
+	</tr><tr class="cssListItem">
+		<td align="center">2024_2025</td><td align="center">2</td><td align="center">8.08</td><td align="center">&nbsp;</td><td align="center">3.43</td><td align="center">&nbsp;</td><td align="center">14</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_4">8.08</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_4"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_4">3.43</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_4"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_4">14</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_4"></span>
+										</td>
+	</tr><tr class="cssListAlternativeItem">
+		<td align="center">2024_2025</td><td align="center">Cả Năm</td><td align="center">7.66</td><td align="center">&nbsp;</td><td align="center">3.10</td><td align="center">&nbsp;</td><td align="center">31</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_5">7.66</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_5"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_5">3.10</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_5"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_5">31</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_5"></span>
+										</td>
+	</tr><tr class="cssListItem">
+		<td align="center">Toàn khóa</td><td align="center">&nbsp;</td><td align="center">7.12</td><td align="center">&nbsp;</td><td align="center">2.59</td><td align="center">&nbsp;</td><td align="center">63</td><td align="center">&nbsp;</td><td align="center">
+											<span id="grdResult_lblDTBCN1_6">7.12</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBCN2_6"></span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N1_6">2.59</span>
+										</td><td align="center">
+											<span id="grdResult_lblDTBC4N2_6"></span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN1_6">63</span>
+										</td><td align="center">
+											<span id="grdResult_lblSoTCN2_6"></span>
+										</td>
+	</tr>
+</table>
+						</TD>
+					</TR>
+				</TBODY>
+			</TABLE>
+			<div class="row">
+				<div class="col-md-12"><label class="form-control-lable-value">BẢNG ĐIỂM CHI TIẾT:</label></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<TABLE class="tableborder" id="tblMarkDetail" cellSpacing="0" cellPadding="0" width="100%"
+						border="0">
+						<TBODY>
+							<TR>
+								<TD class="tableborder" height="300" valign="top">
+									<DIV id="divData"><table id="tblStudentMark" cellpadding="0" cellspacing="0" border="0">
+	<tr class="DataGridFixedHeader" height="20">
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">STT</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">M&#227; học phần</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">T&#234;n học phần</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Số TC</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListHeader DataGridFixedColumn">Lần học</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Lần thi</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Điểm thứ</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">L&#224; điểm tổng kết m&#244;n</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Đ&#225;nh gi&#225;</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">M&#227; sinh vi&#234;n</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">CC</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">THI</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">TKHP</td>
+		<td align="center" style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListHeader">Điểm chữ</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ENG135</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Anh văn 4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">9.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">VBL122</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Bóng chuyền hơi 2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">&nbsp;</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">VLL121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Vật lý</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">9.1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">5.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">MAT140</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Toán cao cấp</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ENG132</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Anh văn 2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">CON131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Mạng máy tính</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ENG136</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Anh văn 3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">GIS131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Tin học đại cương</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ENG131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Anh văn 1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">10</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">DEM230</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Toán rời rạc</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">5.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">5.7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">11</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">ASD232</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Phân tích thiết kế hệ thống</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">9.1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">A</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">12</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">ISE131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Nhập môn công nghệ phần mềm</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">9.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">13</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">DAS231</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Cấu trúc dữ liệu và giải thuật</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">14</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">PHV121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Lịch sử Đảng Cộng sản Việt Nam</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">9.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">4.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">15</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">VBL121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Bóng chuyền hơi 1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">5.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">&nbsp;</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">5.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">D</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">16</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">OOP231</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Lập trình hướng đối tượng</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">3.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">5.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">17</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">BAD131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Cơ sở dữ liệu</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.9</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">18</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">POL131</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Triết học Mác - Lênin</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">7.6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">19</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">PTE231</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Kỹ thuật lập trình</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">5.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">20</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">COM331</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Cấu trúc máy tính và Hệ điều hành</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">5.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.6</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">21</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">PST231</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Xác suất thống kê</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">3.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">5.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">D</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">22</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">POE121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">Kinh tế chính trị Mác - Lênin</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">5.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.8</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">6.2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">C</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">23</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">STS121</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">Chủ nghĩa xã hội khoa học</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">2</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">8.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">6.5</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">7.4</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListItem">B</td>
+	</tr>
+	<tr height="20">
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">24</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">SFI331</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">An toàn thông tin</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" nowrap="nowrap" class="cssListAlternativeItem DataGridFixedColumn">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">1</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DAT</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">DTC235200588</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">9.3</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.0</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">8.7</td>
+		<td style="BORDER-RIGHT:RosyBrown 1px solid;" class="cssListAlternativeItem">A</td>
+	</tr>
+	<tr>
+		<td colspan="14" height="1" bgcolor="#003399"></td>
+	</tr>
+</table>
+</DIV>
+									<P>&nbsp;</P>
+									<P>&nbsp;</P>
+								</TD>
+							</TR>
+						</TBODY>
+					</TABLE>
+				</div>
+			</div>
+			
+<script language="javascript">
+function addfav()
+   {
+   if (document.all)
+      {
+      window.external.AddFavorite
+      ("http://www.webdevelopersnotes.com","WebDevelopersNotes")
+      }
+   }
+
+</script>
+<div style="float:left;margin-top:60px;width:100%">
+<div id="footer_1" align="left">
+	<h4 id="hotline">Ðường dây nóng<br>
+		<span id="PageFooter1_lblHotline"></span>
+	</h4>
+	<h4 style="FONT-SIZE:12px;right:11px;POSITION:absolute;TOP:20px">
+		<a id="PageFooter1_GoHome_ibnGoHome" href="javascript:__doPostBack(&#39;PageFooter1$GoHome$ibnGoHome&#39;,&#39;&#39;)"><font color="White">Trang chủ</font></a>
+
+		|
+		<a id="PageFooter1_SignOut_ibnLogout" href="javascript:__doPostBack(&#39;PageFooter1$SignOut$ibnLogout&#39;,&#39;&#39;)"><font color="White">Thoát</font></a>
+
+		| <A style="COLOR:white" href="./support/default.aspx" target="_blank">Hỏi đáp</A>
+		| <A style="COLOR:white" href="/CMCSoft.IU.Web.Info/WebHelp/NewProject1.htm" target="_blank">Trợ giúp</A>
+	</h4>
+</div>
+<div id="footer_2"></div>
+<table align="center" bgcolor="white" style="PADDING-LEFT:5px;WIDTH:100%">
+	<tr>
+		<TD align="right" width="533">
+			<span id="PageFooter1_lblEmail"><a href="#" onclick="javascript:window.print()"><div style="FLOAT:left">	<img src="/kcntt/images/print.png" border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">In trang này</div></a><a href="mailto:?subject=He thong thong tin IU&amp;body=http://220.231.119.171/kcntt/StudentMark.aspx"><div style="FLOAT:left"><img src="/kcntt/images/sendemail.png"  border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">Gửi email trang này</div></a><a href="#" onclick="javascript:addfav()"><div style="FLOAT:left"><img src="/kcntt/images/addtofavorites.png"  border="0"></div><div style="FLOAT:left;PADDING-TOP:6px">Thêm vào ưa thích</div></a></span>
+		</TD>
+		<td width="604">
+			<div style="FONT-WEIGHT:bold;FONT-SIZE:12px" align="left">
+				<span id="PageFooter1_lblCopyrightNotice"></span>
+				<span id="PageFooter1_lblLastUpdate"></span>
+				<span id="PageFooter1_lblVersion"></span>
+			</div>
+			
+		</td>
+		
+		<td align="right" width="410">
+			<p><a id="PageFooter1_hpUserOnlineList" href="UserOnlineList.aspx" target="_blank">Số người đang Online:</a>				
+				948
+			</p>
+			<p>Lượt truy cập:
+				11998560
+			</p>
+		</td>
+	</tr>
+</table>
+
+</div>
+</form>
+	</body>
+</HTML>
