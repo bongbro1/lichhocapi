@@ -36,13 +36,25 @@ def login(username, password):
         if not redirect_url or "CurrUser=" not in redirect_url:
             return {"error": True, "errorCode": "INVALID_CREDENTIAL", "message": "Sai tài khoản hoặc mật khẩu (TNUT)"}
             
-        curr_user_base64 = unquote(redirect_url.split("CurrUser=")[1])
+        # Lấy phần CurrUser, chỉ dừng lại trước dấu & nếu có
+        curr_user_part = redirect_url.split("CurrUser=")[1]
+        if "&" in curr_user_part:
+            curr_user_part = curr_user_part.split("&")[0]
+            
+        curr_user_base64 = unquote(curr_user_part)
+        
+        # Sửa lỗi padding Base64
+        curr_user_base64 = curr_user_base64.strip()
+        missing_padding = len(curr_user_base64) % 4
+        if missing_padding:
+            curr_user_base64 += '=' * (4 - missing_padding)
+            
         try:
-            curr_user_data = json.loads(base64.b64decode(curr_user_base64).decode())
-        except Exception:
-            missing_padding = len(curr_user_base64) % 4
-            if missing_padding: curr_user_base64 += '=' * (4 - missing_padding)
-            curr_user_data = json.loads(base64.b64decode(curr_user_base64).decode())
+            curr_user_data = json.loads(base64.b64decode(curr_user_base64).decode('utf-8'))
+        except Exception as e:
+            # Nếu vẫn lỗi, thử clean lần nữa (loại bỏ ký tự lạ)
+            clean_b64 = "".join(c for c in curr_user_base64 if c.isalnum() or c in "+/=")
+            curr_user_data = json.loads(base64.b64decode(clean_b64).decode('utf-8'))
 
         if not curr_user_data.get("result"):
             return {"error": True, "message": "Portal TNUT từ chối đăng nhập"}

@@ -15,5 +15,6 @@ services:
       - ./domains/tnut/data:/app/domains/tnut/data
       - ./domains/ictu/data:/app/domains/ictu/data
       - ./storage:/app/storage
+      - ./config:/app/config
 
 # Lệnh chạy: docker-compose up -d --build
