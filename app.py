@@ -171,6 +171,14 @@ def dashboard():
     return render_template("dashboard.html", user=session.get("user"))
 
 
+@app.route("/ai-chat")
+def ai_chat():
+    if "user" not in session:
+        return redirect(url_for("login_form"))
+
+    return render_template("ai_chat.html", user=session.get("user"))
+
+
 @app.route("/api/admin/users", methods=["GET"])
 def admin_list_users():
     _, error_response = require_session_user_json()
@@ -346,6 +354,109 @@ def generate_token():
             "expireAt": privilege_expired_ts,
         }
     )
+
+
+@app.route("/api/ai/chat", methods=["POST"])
+def ai_chat_endpoint():
+    if not request.is_json:
+        return jsonify({"success": False, "error": "Invalid request"}), 400
+
+    req_data = request.get_json()
+    message = req_data.get("message")
+    subject_name = req_data.get("subjectName", "Không xác định")
+    schedule_context = req_data.get("scheduleContext", "Không có thông tin")
+    history = req_data.get("history", [])
+
+    if not message:
+        return jsonify({"success": False, "error": "Message is required"}), 400
+
+    # Cấu hình Ollama
+    OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/chat")
+    
+    # Xây dựng danh sách tin nhắn cho Ollama
+    ollama_messages = [
+        {
+            "role": "system",
+            "content": (
+                "Bạn là 'Trợ lý Học tập AI' thông minh và tận tâm tích hợp trong ứng dụng Lịch Sinh Viên. "
+                "Nhiệm vụ của bạn là hỗ trợ sinh viên quản lý thời gian, tóm tắt kiến thức và giải đáp thắc mắc học tập.\n\n"
+                
+                "PHONG CÁCH LÀM VIỆC:\n"
+                "- Ngôn ngữ: Tiếng Việt, chuyên nghiệp nhưng gần gũi, truyền cảm hứng học tập.\n"
+                "- Trình bày: Sử dụng Markdown một cách triệt để. Dùng BẢNG để so sánh, DANH SÁCH để tóm tắt các bước, và IN ĐẬM các từ khóa quan trọng.\n"
+                "- Độ dài: Trả lời súc tích, tập trung vào trọng tâm, tránh nói dông dài.\n\n"
+                
+                "QUY TẮC XỬ LÝ DỮ LIỆU:\n"
+                "- NGỮ CẢNH: Bạn được cung cấp 'Môn học hiện tại' và 'Lịch học 3 ngày tới'. Hãy chủ động sử dụng dữ liệu này để đưa ra lời khuyên. "
+                "Ví dụ: Nếu thấy ngày mai có bài kiểm tra, hãy nhắc nhở người dùng ôn tập ngay.\n"
+                "- TRUNG THỰC: Chỉ trả lời dựa trên dữ liệu thật. Tuyệt đối không bịa đặt điểm số, deadline hay lịch học nếu không có trong ngữ cảnh.\n"
+                "- PHẠM VI: Bạn có thể tán gẫu nhẹ nhàng, hài hước hoặc hỗ trợ tìm kiếm kiến thức tổng quát nếu người dùng yêu cầu. Tuy nhiên, sau mỗi câu trả lời ngoài lề, hãy luôn tìm cách nhắc nhở khéo léo về lịch học hoặc gợi ý một chủ đề ôn tập liên quan đến môn học của họ.\n\n"
+                
+                "KHI NGƯỜI DÙNG HỎI BÀI:\n"
+                "1. Giải thích khái niệm một cách dễ hiểu nhất.\n"
+                "2. Đưa ra ví dụ minh họa thực tế.\n"
+                "3. Gợi ý 3 câu hỏi ôn tập để người dùng tự kiểm tra kiến thức.\n\n"
+                
+                "KHI NGƯỜI DÙNG TÁN GẪU/HỎI NGOÀI LỀ:\n"
+                "- Hãy trả lời một cách thông minh, hóm hỉnh.\n"
+                "- Sau đó chốt lại bằng một câu đại loại như: 'Giải trí thế đủ rồi, bạn có muốn mình cùng xem lại lịch học ngày mai không?' hoặc 'Kiến thức này thú vị đấy, nhưng đừng quên hôm nay bạn có môn X cần chuẩn bị nhé!'"
+            )
+        }
+    ]
+
+    # Thêm lịch sử chat (nếu có)
+    for h in history:
+        ollama_messages.append({
+            "role": h.get("role"),
+            "content": h.get("content")
+        })
+
+    # Thêm câu hỏi hiện tại với ngữ cảnh
+    user_content = f"Ngữ cảnh môn học: {subject_name}\nNgữ cảnh lịch học/deadline: {schedule_context}\nCâu hỏi: {message}"
+    ollama_messages.append({
+        "role": "user",
+        "content": user_content
+    })
+
+    try:
+        import requests
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": "qwen2.5:3b",
+                "messages": ollama_messages,
+                "stream": False
+            },
+            timeout=60 # Tăng timeout vì AI có thể trả lời lâu
+        )
+        
+        if response.status_code != 200:
+            return jsonify({
+                "success": False, 
+                "error": "Trợ lý học tập hiện chưa sẵn sàng. Vui lòng thử lại sau.",
+                "details": response.text
+            }), 503
+
+        ai_response = response.json()
+        reply = ai_response.get("message", {}).get("content", "").strip()
+
+        if not reply:
+            return jsonify({
+                "success": False, 
+                "error": "Mình chưa tạo được câu trả lời, bạn thử hỏi lại rõ hơn nhé."
+            }), 200
+
+        return jsonify({
+            "success": True,
+            "reply": reply
+        })
+
+    except Exception as e:
+        print(f"[AI ERROR] {str(e)}")
+        return jsonify({
+            "success": False, 
+            "error": "Trợ lý học tập hiện chưa sẵn sàng. Vui lòng thử lại sau."
+        }), 500
 
 
 if __name__ == "__main__":
